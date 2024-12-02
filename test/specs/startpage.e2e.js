@@ -6,6 +6,8 @@ describe('Amplify.com', () => {
         await StartPage.open()
 
         await expect($('.icon.icon--logo').toBeVisible())
+        expect($('#augusta-ButtonElement--hKAdB82mq8CHpx8qWQKA').toBeVisible())
+        await $('#augusta-ButtonElement--hKAdB82mq8CHpx8qWQKA').click();
         await browser.pause(5000);
     })
 })
