@@ -6,7 +6,6 @@ describe('Amplify.com', () => {
         await StartPage.open()
 
         await expect($('.icon.icon--logo').toBeVisible())
-        await browser.pause(5000);
     })
 })
 
