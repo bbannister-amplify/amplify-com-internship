@@ -7,7 +7,7 @@ import Page from './page.js';
 class KnowledgePage extends Page {
 
     open () {
-        return super.open('https://amplify.com/science-of-reading/knowledge-building/');
+        return super.open('science-of-reading/knowledge-building/');
     }
 }
 
