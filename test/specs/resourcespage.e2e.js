@@ -16,5 +16,11 @@ describe('Amplify.com', () => {
         await expect(buttonFour).toContain('Community')
         const buttonFive = await $('#m-support').getText()
         await expect(buttonFive).toContain('Support')
+        const title = await $('.m-dashtitle > h1').getText()
+        await expect(title).toContain('Welcome to the Resources Hub.')
+        const scienceBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
+        await $('.a-btn.a-btn--shortcode.a-btn--primary').click();
+        const materialBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
+        await $('.a-btn.a-btn--shortcode.a-btn--primary').click()
     })
 })
