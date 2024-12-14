@@ -6,6 +6,8 @@ describe('Amplify.com', () => {
         await KnowledgePage.open();
 
         await expect($('.icon.icon--logo').toBeVisible());
+        await expect($('.m-salesButton__main').toBeVisible());
+        
     })
 })
 
