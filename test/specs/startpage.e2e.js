@@ -10,6 +10,12 @@ describe('Amplify.com', () => {
         const mClass = await $$('.m-card__content')[2].getText()
           await expect($('.m-card__content').toBeVisible())
           await expect(mClass).toContain("mCLASS")
+          const seeResearch = await $$('.a-btn.a-btn--shortcode.a-btn--primary')[5].getText()
+          await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
+          await expect(seeResearch).toContain("See Research Unit trade books")
+          const viewEmbedded = await $$('.a-btn.a-btn--shortcode.a-btn--primary')[6].getText()
+          await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
+          await expect(viewEmbedded).toContain("View embedded support")
         await browser.pause(5000);
     })
 })
