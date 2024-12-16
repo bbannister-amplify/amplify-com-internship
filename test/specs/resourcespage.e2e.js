@@ -18,18 +18,51 @@ describe('Amplify.com', () => {
         await expect(buttonFive).toContain('Support')
         const title = await $('.m-dashtitle > h1').getText()
         await expect(title).toContain('Welcome to the Resources Hub.')
-        const scienceReadBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
-        await $('.a-btn.a-btn--shortcode.a-btn--primary').click();
-        const materialBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
-        await $('.a-btn.a-btn--shortcode.a-btn--primary').click()
-        const literaryBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
-        await browser.debug()
-        await $('.a-btn.a-btn--shortcode.a-btn--primary').click()
-        // const mathBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
-        // await $('.a-btn.a-btn--shortcode.a-btn--primary').click()
-        // const scienceBtn = await expect($('.a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
-        // await $('.a-btn a-btn--shortcode a-btn--primary').click()
-        // const researchBtn = await expect($('a-btn.a-btn--shortcode.a-btn--primary').toBeVisible())
-        // await $('.a-btn.a-btn--shortcode.a-btn--primary').click()
+
+        await expect($('a[href*="/the-importance-of-reading-fluency"]').toBeVisible());
+        await $('a[href*="/the-importance-of-reading-fluency"]').click();
+        await browser.back()
+
+        // button tests
+        const scienceReadBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[0].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[0].click();
+        await browser.back()
+        const materialBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[1].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[1].click()
+        await browser.back()
+        const literaryBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[2].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[2].click();
+        await browser.back()
+        const mathBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[3].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[3].click()
+        await browser.back()
+        const scienceBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[4].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[4].click();
+        await browser.back()
+        const researchBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[5].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[5].click()
+        await browser.back()
+        const blogBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[6].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[6].click();
+        await browser.back()
+        const libraryBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[7].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[7].click()
+        await browser.back()
+        // const mediaBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[8].toBeVisible())
+        // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[8].click();
+        // await browser.back()
+        // const eventsBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[9].toBeVisible())
+        // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[9].click()
+        // await browser.back()
+        // const contactBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[10].toBeVisible())
+        // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[10].click();
+        // await browser.back()
+
+// link tests
+
+
+
+
+
     })
 })
