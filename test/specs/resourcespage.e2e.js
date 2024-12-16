@@ -23,11 +23,16 @@ describe('Amplify.com', () => {
         await expect($('a[href*="/the-importance-of-reading-fluency"]').toBeVisible());
         await $('a[href*="/the-importance-of-reading-fluency"]').click();
         await browser.back()
-        await browser.pause(3000)
-        await expect($('a[href*="/science-of-reading-the-podcast/"]').toBeVisible());
-        await $('a[href*="/science-of-reading-the-podcast/"]').click();
+        // await browser.pause(3000)
+        await expect($('a[href*="four-principles-of-true-engagement-in-middle-school"]').toBeVisible());
+        await $('a[href*="four-principles-of-true-engagement-in-middle-school"]').click();
         await browser.back();
-
+        await expect($('a[href*="finding-a-path-for-equitable-mathematical-student-discourse"]').toBeVisible());
+        await $('a[href*="finding-a-path-for-equitable-mathematical-student-discourse"]').click();
+        await browser.back();
+        // await expect($('a[href*="AM_Bifold-CollabClassroom_042522.pdf"]').toBeVisible());
+        // await $('a[href*="AM_Bifold-CollabClassroom_042522.pdf"]').click();
+        // await browser.back();
         // button tests
         const scienceReadBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[0].toBeVisible())
         await $$('.a-btn.a-btn--shortcode.a-btn--primary')[0].click();
@@ -52,16 +57,16 @@ describe('Amplify.com', () => {
         await browser.back()
         const libraryBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[7].toBeVisible())
         await $$('.a-btn.a-btn--shortcode.a-btn--primary')[7].click()
-        await browser.back()
-        // const mediaBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[8].toBeVisible())
-        // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[8].click();
-        // await browser.back()
-        // const eventsBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[9].toBeVisible())
-        // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[9].click()
-        // await browser.back()
-        // const contactBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[10].toBeVisible())
-        // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[10].click();
-        // await browser.back()
+        await browser.switchWindow('Resources hub | Amplify')
+        const mediaBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[8].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[8].click();
+        await browser.switchWindow('Resources hub | Amplify')
+        const eventsBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[9].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[9].click()
+        await browser.switchWindow('Resources hub | Amplify')
+        const contactBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[10].toBeVisible())
+        await $$('.a-btn.a-btn--shortcode.a-btn--primary')[10].click();
+      
 
 
 
