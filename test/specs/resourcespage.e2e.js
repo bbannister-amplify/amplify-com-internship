@@ -19,9 +19,14 @@ describe('Amplify.com', () => {
         const title = await $('.m-dashtitle > h1').getText()
         await expect(title).toContain('Welcome to the Resources Hub.')
 
+// Link test
         await expect($('a[href*="/the-importance-of-reading-fluency"]').toBeVisible());
         await $('a[href*="/the-importance-of-reading-fluency"]').click();
         await browser.back()
+        await browser.pause(3000)
+        await expect($('a[href*="/science-of-reading-the-podcast/"]').toBeVisible());
+        await $('a[href*="/science-of-reading-the-podcast/"]').click();
+        await browser.back();
 
         // button tests
         const scienceReadBtn = await expect($$('.a-btn.a-btn--shortcode.a-btn--primary')[0].toBeVisible())
@@ -58,7 +63,6 @@ describe('Amplify.com', () => {
         // await $$('.a-btn.a-btn--shortcode.a-btn--primary')[10].click();
         // await browser.back()
 
-// link tests
 
 
 
